@@ -1,0 +1,11 @@
+$color-gradient : linear-gradient(90deg, #FFD622 40%, white 40%);
+$color-red : hsla(0, 79%, 63%, 1);
+$color-yellow : hsla(49, 100%, 57%, 1);
+$color-purple : hsla(269, 75%, 17%, 1);
+$color-grey : hsla(0, 0%, 28%, 1);
+$color-cyan : hsla(191, 65%, 44%, 1);
+/* lightgrey used in background of brain image, on small screens*/
+$color-lightgrey : hsla(0, 0%, 88.4%, 1); //E1E1E1
+$color-white : hsla(360, 100%, 100%, 1); //E1E1E1
+/*rather than importing in each scss file, it's imported in here, once and only.*/
+@import "src/mediaqueries.scss";

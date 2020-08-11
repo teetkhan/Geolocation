@@ -1,0 +1,107 @@
+@import "../../color.scss";
+
+p {
+    font-family: Lato;
+  }
+ .logo{
+    padding: 0vw 0vw 0vw 8vw;
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+  }
+
+.top{
+    padding: 1vw 0vw 0vw 0vw;
+}
+.navbar{
+   background-color:  #bd2130;   
+   padding-right: 0px !important;
+}
+
+.map {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+     
+  }
+
+  .location{
+    position: absolute;
+    top: 14vw;
+    margin: 1vw;
+    /* border: none; */
+    z-index: 4;
+    height: 44px;
+    border-radius: 29px;
+    /* text-align: center; */
+    width: 95%;
+  }
+  .menuright  {
+    margin-left: 6vw;
+    margin-right: 0vw;
+  }
+
+  
+.btn_div_tool {
+    top: 2vw;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding-right: 15vw;
+  
+   
+    @media only screen and (max-width: 699px) {
+      top: 89vh;
+      left: 0vw !important;
+      padding: 0vw 2vw 0vw 1vw !important;
+      right: 0vw;
+      position: absolute;
+  
+    }
+  }
+  .btn_Postadd {
+    display: block;
+    width: 20vw;
+    margin-top: 1em;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 9px;
+    
+    border: none;
+      background: #bd2130;
+      &:hover {
+        background: #bd2130;
+      }
+    
+      @media only screen and (max-width: 1023px) {
+     
+        border-radius: 32px;
+      padding: 0.7em;
+      }
+  
+    @media only screen and (max-width: 700px) {
+        width: 60.5vw;
+        border-radius: 32px;
+    }
+    @media only screen and (max-width: 600px) {
+        width: 60.5vw;
+        border-radius: 32px;
+    }
+    @media only screen and (max-width: 480px) {
+        width: 60.5vw;
+        border-radius: 32px;
+    }
+  }
+  .btn_text_tool {
+    color: #ffffff;
+    font-family: Lato;
+    font-style: normal;
+    
+    font-size: 1.2vw;
+  
+    @media only screen and (max-width: 699px) {
+      font-size: 1.25em;
+    }
+  }

@@ -1,0 +1,178 @@
+@import "../../color.scss";
+
+p {
+    font-family: Lato;
+  }
+ .logo{
+    padding: 0vw 0vw 0vw 8vw;
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+  }
+
+.top{
+    padding: 1vw 0vw 0vw 0vw;
+}
+.navbar{
+   background-color:  #bd2130;
+}
+
+ .accessgal{
+    text-align: center;
+    width: 100%;
+    padding: 6vw 6vw 0vw 6vw;
+ }
+ .galtext{
+    text-align: center;
+    width: 100%; 
+    color:#bd2130;
+ }
+
+ .title {
+  padding: 0vw 0vw 0vw 2vw;
+  font: 600 14px/17px 'Lato';
+  margin:20px 0px 0px 0px;
+  @include for-medium-large-screens {
+    margin-left: 48%;
+  }
+ 
+}
+ .PropertyAddress {
+    widows: 100%;
+    padding: 0vw 0vw 0vw 2vw;
+    position: relative;
+    margin-top:10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: flex-start;
+ // border-bottom: 1px solid #aaa;
+      span:not(.spanfilename) {
+        //flex:1 1 5px;
+        align-self: center;
+        font: 400 12px/15px 'Lato';
+        padding-left: 10px;
+        text-align: right;
+        width: 25px;
+      }    
+      
+      input.keyword {
+        width:92%;// larger screens
+        @include for-phone-portrait-landscape {
+          width: 88%;
+        }
+        @include for-phone-portrait{//order of mediaquery for small devices to overwrite the above width
+          width:80%;
+        }
+        
+        border:0;
+        border-radius: 3px;
+        height: 36px;
+        padding-left: 5px;//0;
+        font: 400 12px/15px 'Lato';
+        color: #606060;          
+      &:focus {
+        outline-width: 0;
+        outline: none;
+      }
+      } 
+                 
+      img{
+        align-self: center;
+      }
+      
+      
+  }
+
+  .kwborderline {
+    width:95%; 
+    height:1px;
+    background-color:#aaa;
+  }
+  
+
+  .textareacontainer {
+    width: 100%;
+    padding: 2vw;
+  
+      @include for-medium-large-screens {
+        order:1;
+        width: 74%;
+      }
+      
+      textarea {
+        border: none;
+        width: 99%;
+        margin:3px;
+        font:400 12px/15px 'Lato';
+        color: #606060;
+      } 
+    }
+
+
+      
+.btn_div_tool {
+  top: 2vw;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding-right: 15vw;
+
+ 
+  @media only screen and (max-width: 699px) {
+    top: 89vh;
+    left: 0vw !important;
+    padding: 0vw 2vw 0vw 1vw !important;
+    right: 0vw;
+    position: absolute;
+
+  }
+}
+.btn_Postadd {
+  display: block;
+  width: 20vw;
+  margin-top: 1em;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 9px;
+  
+  border: none;
+    background: #bd2130;
+    &:hover {
+      background: #bd2130;
+    }
+  
+    @media only screen and (max-width: 1023px) {
+   
+      border-radius: 32px;
+    padding: 0.7em;
+    }
+
+  @media only screen and (max-width: 700px) {
+      width: 60.5vw;
+      border-radius: 32px;
+  }
+  @media only screen and (max-width: 600px) {
+      width: 60.5vw;
+      border-radius: 32px;
+  }
+  @media only screen and (max-width: 480px) {
+      width: 60.5vw;
+      border-radius: 32px;
+  }
+}
+.btn_text_tool {
+  color: #ffffff;
+  font-family: Lato;
+  font-style: normal;
+  
+  font-size: 1.2vw;
+
+  @media only screen and (max-width: 699px) {
+    font-size: 1.25em;
+  }
+}
+
+    

@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid px-0">
+            <div class="row w-100 top">
+                <div class="col-4">
+                        <svg color="white" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-text-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                          </svg>
+    
+                </div>
+                <div class="col-6"><span class="logo">LOGO</span>
+                    
+                </div>
+                <div class="menuright"><svg  color="white" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-file-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
+                    <path fill-rule="evenodd" d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z"/>
+                  </svg></div>
+                
+                <div class="col-10">
+                    <div class="collapse justify-content-end navbar-collapse" [ngClass]="{ 'show': isShown }"
+                        id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mt-2 mt-lg-0">
+    
+    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+        
+    <div>   <input   placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control location" #search> </div>
+      <div class="map" #map> </div>
+      <div class="btn_div_tool">
+            <button class="btn_Postadd" (click)="next()" ><span class="btn_text_tool">POST YOUR AD</span></button>
+        </div>

@@ -1,0 +1,111 @@
+    /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+@mixin  for-desktop-laptop {
+  @include for-desktop {
+    @content;
+  }
+  @include for-laptop {
+    @content;
+  }
+}
+@mixin  for-laptop {
+  @media (min-width: 1281px) {
+   @content; 
+  }  
+}
+
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@mixin  for-desktop {
+  @media (min-width: 1025px) and (max-width: 1280px) {
+     @content;
+  }  
+}
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@mixin  for-tablet-portrait {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content; 
+  }  
+}
+
+@mixin for-medium-large-screens {
+  @media (min-width:768px){
+    @content;
+  }
+}
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@mixin  for-small-tablet-landscape {
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;  
+  }  
+}
+
+/*Low Resoultion Tablets*/
+@mixin  for-small-tablet-portrait {
+  @media (min-width: 481px) and (max-width: 767px) {
+    @content;
+  }  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@mixin  for-phone-landscape {
+  @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    @content;
+  }  
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@mixin for-phone-portrait {
+  @media (min-width: 320px) and (max-width: 480px) {
+  @content;
+  }
+}
+
+/*common in 320px to 767px*/
+@mixin  for-phone-portrait-landscape {
+  @include for-phone-portrait{@content;}
+  @include for-phone-landscape{@content;}
+  @include for-small-tablet-portrait{@content;}
+}
+/*common in 481 to 767*/
+@mixin  for-phone-landscape-tablet {
+  @include for-phone-landscape{@content;}
+  @include for-small-tablet-portrait{@content;}
+}
+/*device sizes*/
+/*
+1. 360x640
+2.1366x768
+3.1920x1080
+4.375x667
+5.360x720
+6.1440x900
+7.768x1024
+8.1536x864
+9.414x736
+10.360x760
+11.412x846
+12.1600x900
+13.375x812
+14.others
+*/
