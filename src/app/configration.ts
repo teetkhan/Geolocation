@@ -1,7 +1,8 @@
-//AIzaSyDFl3bYSp02g3OaSQ2a3AX3JItbSWfWibo
+
 
 export class Configuration {
-    static googlemaps = "AIzaSyDFl3bYSp02g3OaSQ2a3AX3JItbSWfWibo";
+    static googlemaps = "AIzaSyDmbdO2wanvZM1qFgVnu2z6NotRaINT0cI";
+    //"AIzaSyCaKbVhcX_22R_pRKDYuNA7vox-PtGaDkI";
  
     
    

@@ -155,27 +155,27 @@ export class MapsComponent implements OnInit {
       icon: this.pin(color),
     });
 
-    const rectangle = new google.maps.Rectangle({
-      strokeColor: color,
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillColor: color,
-      fillOpacity: 0.35,
-      map: this.map,
-      bounds: place.geometry.viewport
-    });
+    // const rectangle = new google.maps.Rectangle({
+    //   strokeColor: color,
+    //   strokeOpacity: 0.8,
+    //   strokeWeight: 2,
+    //   fillColor: color,
+    //   fillOpacity: 0.35,
+    //   map: this.map,
+    //   bounds: place.geometry.viewport
+    // });
 
-    const expandedRectangle = new google.maps.Rectangle({
-      strokeColor: color,
-      strokeOpacity: 0.8,
-      strokeWeight: 0.5,
-      fillColor: color,
-      fillOpacity: 0.2,
-      map: this.map,
-     // bounds: expandBounds(place.geometry.viewport.toJSON(), 5000),
-    });
+    // const expandedRectangle = new google.maps.Rectangle({
+    //   strokeColor: color,
+    //   strokeOpacity: 0.8,
+    //   strokeWeight: 0.5,
+    //   fillColor: color,
+    //   fillOpacity: 0.2,
+    //   map: this.map,
+    //  // bounds: expandBounds(place.geometry.viewport.toJSON(), 5000),
+    // });
 
-    const location = this.locationFromPlace(place);
+    // const location = this.locationFromPlace(place);
 
     // const ellipse = new google.maps.Polygon({
     //   paths: toEllipse(location.bounds).map(({ latitude, longitude }) => new google.maps.LatLng(latitude, longitude)),
@@ -187,16 +187,10 @@ export class MapsComponent implements OnInit {
     // });
     // ellipse.setMap(this.map);
 
-    this.entries.unshift({ place, marker, rectangle, expandedRectangle, color, location });
+    this.entries.unshift({ place, marker,  color, location });
   }
 
-  remove(entry) {
-    entry.marker.setMap(null);
-    entry.rectangle.setMap(null);
-    entry.expandedRectangle.setMap(null);
-    entry.ellipse.setMap(null);
-    this.entries = this.entries.filter(e => e !== entry);
-  }
+ 
 
   pin(color) {
     return {
