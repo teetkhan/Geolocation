@@ -1,7 +1,7 @@
 
 
 export class Configuration {
-    static googlemaps = "AIzaSyDmbdO2wanvZM1qFgVnu2z6NotRaINT0cI";
+    static googlemaps = "AIzaSyBX_qWHw0x1yStTOmVIQCIptNIoFXW5J1k";
     //"AIzaSyCaKbVhcX_22R_pRKDYuNA7vox-PtGaDkI";
  
     
