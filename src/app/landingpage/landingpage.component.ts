@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject, ElementRef, ViewChild, NgZone } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
+import { Router, NavigationExtras, Navigation, Data } from '@angular/router';
 import { ApiService, Maps } from '../maps/api.service';
+import { Waypoints } from '../classes/waypoints';
+import { DataService } from '../maps/data.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -12,44 +14,40 @@ export class LandingpageComponent implements OnInit {
   public AddressElementRef: ElementRef;
   private map: google.maps.Map;
   public address;
-  latitude: number;
-  longitude: number;
+  waypoints = new Array<Waypoints>();
 
-
-  constructor(private apiService: ApiService, private ngZone: NgZone, private router: Router) {
-
+  constructor(private apiService: ApiService, private ngZone: NgZone, private router: Router, private data: DataService) {
+    this.data.currentwaypoints.subscribe(wp => this.waypoints = wp);
   }
 
   ngAfterViewInit(): void {
-
     this.apiService.api.then(maps => {
       this.initAutocomplete(maps);
-
     });
   }
 
   initAutocomplete(maps: Maps) {
     let autocomplete = new maps.places.Autocomplete(this.AddressElementRef.nativeElement);
-
     autocomplete.addListener("place_changed", () => {
       this.address = autocomplete.getPlace();
       this.ngZone.run(() => {
         let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-
         //verify result
         if (place.geometry === undefined || place.geometry === null) {
           return;
         }
-
         //set latitude, longitude and zoom
-        this.latitude = place.geometry.location.lat();
-        this.longitude = place.geometry.location.lng();
+        this.waypoints.push(new Waypoints(place));
+        this.newMessage(this.waypoints);
 
       });
     });
   }
 
   ngOnInit() {
+  }
+  newMessage(wp: Array<Waypoints>) {
+    this.data.changeMessage(wp)
   }
 
 
@@ -61,15 +59,8 @@ export class LandingpageComponent implements OnInit {
   }
 
 
-  next() {
-    var navExtra: NavigationExtras = {};
-
-    navExtra.state = {
-      "Address": this.address.formatted_address,
-      "Lat": this.latitude,
-      "Long": this.longitude
-    }
-    this.router.navigate([''], navExtra);
+  next() {  
+    this.router.navigate(['']);
   }
 
 }
